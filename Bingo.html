@@ -513,12 +513,18 @@
         </tr>
     </table>
     <div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button onclick="bola()" class="btn btn-light custom-btn btn-16"><svg xmlns="http://www.w3.org/2000/svg"
-                    width="50" height="50" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z" />
-                </svg>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
+            <button onclick="bola()" class="btn btn-light custom-btn btn-16" style="display: block;" name="start" id="start"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
+            <button onclick="pausa()" class="btn btn-light custom-btn btn-16" style="display: none;"  name="para" id="para"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pause-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
+              </svg>
             </button>
         </div>
         <div class="ball">
@@ -545,6 +551,14 @@
             bola()
             console.log("la bolita ya esta " + bolita)
         }
+        temp1=setTimeout(("bola()"),5000)
+        start.style.display="none"
+        para.style.display="block"
+    }
+    function pausa(){
+        clearTimeout(temp1)
+        start.style.display="block"
+        para.style.display="none"
     }
 </script>
 
