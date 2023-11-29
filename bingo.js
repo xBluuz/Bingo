@@ -8,7 +8,7 @@ function bola() {
         numero.className = "bal selecionado";
         repetidas.push(bolita);
         document.getElementById('numero').textContent = bolita;
-        temp1 = setTimeout("bola()", 500);
+        temp1 = setTimeout("bola()", 5000);
     } else {
         bola();
         console.log("la bolita ya esta " + bolita);
