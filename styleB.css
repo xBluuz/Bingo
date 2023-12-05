@@ -1,5 +1,6 @@
 body {
     height: 100vh;
+    user-select: none;
 }
 
 .bal {
@@ -247,7 +248,7 @@ h1 {
     padding: 0;
 
     margin-left: 74px;
-    margin-top: -20px;
+    margin-top: -10px;
     width: 100%;
     position: fixed;
 }
